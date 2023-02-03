@@ -6,6 +6,17 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
 }
+
+body {  overflow-x: hidden;}
+
+.fromBottom {
+    opacity: 0%;
+}
+
+.fromRight {
+    opacity: 0%;
+}
+
 a {
   display: inline-block;
   list-style: none;
@@ -29,7 +40,6 @@ a:visited {
   -o-background-size: cover;
   width: 100%;
   height: 100%;
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -42,9 +52,10 @@ a:visited {
   color: white;
   letter-spacing: 0.025em;
   transition: background-color 0.2s linear;
+  z-index:1;
 }
 .nav-container.solid-nav {
-  background-color: #aaa;
+  background-color: rgb(5, 5, 5);
   transition: background-color 0.2s linear;
 }
 .nav-container .nav-row {
@@ -75,3 +86,31 @@ a:visited {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+  [data-inviewport="scale-in"] { 
+    transition: 2s;
+    transform: scale(0.1);
+  }
+  [data-inviewport="scale-in"].is-inViewport { 
+    transform: scale(1);
+  }
+  
+  [data-inviewport="fade-rotate"] { 
+    transition: 2s;
+    opacity: 0;
+  }
+
+  [data-inviewport="fade-rotate"].is-inViewport { 
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+
+  [data-inviewport="slide-in"] { 
+    transition: 4s;
+    transform: translate(100px,0);
+    opacity: 0;
+  }
+  [data-inviewport="slide-in"].is-inViewport { 
+    transform: translate(0px,0px);
+    opacity: 1;
+  }

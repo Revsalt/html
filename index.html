@@ -3,6 +3,7 @@
     <link rel="stylesheet" type="text/css" href="OHS.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
   
   <body>
@@ -23,9 +24,9 @@
       </div>
     </div>
     
-    <div class="container" style="background-color: black;">
-      <div class="row">
-        <h1 >
+    <div class="container" style="background-color: black;" data-inviewport="scale-in">
+      <div class="row" >
+        <h1>
           KOSOMAK IN STYLE
         </h1>
         <p>
@@ -35,7 +36,7 @@
     </div>
     
     <div class="container">
-      <div class="row">
+      <div class="row" data-inviewport="slide-in">
         <h1>
           EL SHAWAZ
         </h1>
@@ -48,7 +49,7 @@
     </div>
     
     <div class="container" style="background-color: black;">
-      <div class="row">
+      <div class="row" data-inviewport="scale-in">
         <h1>
           EL LESBIEN
         </h1>
@@ -57,6 +58,33 @@
         </p>
       </div>
     </div>
+
+    <div class="container" style="background-image:  linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);">
+      <div class="row" data-inviewport="slide-in">
+        <h1 style="color: white;">
+          EL PANSEXUAL
+        </h1>
+        <p style="color: white;">
+          el nas dol ma3roffen 3anhom enohm 3andohm atachment 5areka lel frying pans mats2lsh ezay
+          they just have it ... wa tab3an t2dar te7adad ay 7ad menhom mn 3almet el 7ar2 3ala zebo,
+          bas bardo the question remains unsloved do they fuck cold pans or hot pans send us an email about your thoughts.
+        </p>
+
+          <form action="mailto:mr.revsalt@gmail.com" method="post" enctype="text/plain">
+          Name:<br>
+          <input type="text" name="name"><br>
+          E-mail:<br>
+          <input type="text" name="mail"><br>
+          Comment:<br>
+          <input type="text" name="comment" size="50"><br><br>
+          <input type="submit" value="Send">
+          <input type="reset" value="Reset">
+          </form>
+
+      </div>
+    </div>
+
+
   </body>
   
 <script type="text/javascript">
@@ -71,7 +99,23 @@ $(document).ready(function () {
       $(".nav-container").removeClass("solid-nav");
     }
   });
+  });
+  </script>
+
+<script>
+const inViewport = (entries, observer) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+  });
+};
+
+const Obs = new IntersectionObserver(inViewport);
+const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+// Attach observer to every [data-inviewport] element:
+const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+ELs_inViewport.forEach(EL => {
+  Obs.observe(EL, obsOptions);
 });
 
-
-  </script>
+</script>
