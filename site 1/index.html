@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="bla.css">
+<head>
+<title>CSS Template</title>
+<meta name="vie wport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h3>OHS.</h3>
+<p> we blah blah blah blah.... <br> blah blah</p>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const square = entry.target.querySelector('h3');
+
+    if (entry.isIntersecting) {
+      square.classList.add('fadeIn');
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    square.classList.remove('fadeIn');
+  });
+});
+
+observer.observe(document.querySelector('h3'));
+</script>
+<header>
+  <h2>ABOUT US</h2>
+</header>
+
+<section>
+  
+  <article>
+    <h1>we help people make money thank you mister omar for the money we 
+      r making beacuse u help in the marketing journey habibi ro7 albi</h1>
+
+  </article>
+
+  <article>
+    <h1>zebi was small bas ba3d bo3d al 3amleyat b2a kabeer neek zay miko</h1>
+
+  </article>
+</section>
+
+<header>
+  <h2>CONTACT US</h2>
+</header>
+
+<section>
+  
+  <article>
+    <h1>call the suicidle hotline wa say 
+      "ana peter griffen 3ayez a neek cats" wa wa7d mn momathly 5edmat al 3omala2 hatgeeelak</h1>
+
+  </article>
+</section>
+
+</body>
+</html>

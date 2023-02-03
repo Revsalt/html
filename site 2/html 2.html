@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="alb.css">
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<title>OHS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<header> 
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">ABOUT US</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">CONTACT US</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">HOME</button>
+      </div>
+</header>
+
+<body>
+
+    <div class="parallax"></div>
+    <img src="market.png" style="width:100%;height:auto;object-position: center;">
+    
+    <span></span>
+
+    <h1>
+        TRANSFORM YOUR BRAND
+      </h1>
+
+      <span></span>
+<div class="banner-wrapper">
+    <div class="banner banner-transition"></div>
+  </div>
+</body>
+
+<script>
+// Remove the transition class
+const banner = document.querySelector('.banner');
+banner.classList.remove('banner-transition');
+
+// Create the observer, same as before:
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        banner.classList.add('banner-transition');
+      return;
+    }
+
+    banner.classList.remove('banner-transition');
+  });
+});
+
+observer.observe(document.querySelector('.banner-wrapper'));
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+$(window).scroll(function() {
+
+    var height = $('.first-container').height();
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop >= height - 40) {
+        $('.nav-container').addClass('solid-nav');
+    } else {
+        $('.nav-container').removeClass('solid-nav');
+    }
+
+});
+});
+</script>
+
+
+</html>

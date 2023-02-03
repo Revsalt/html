@@ -1,0 +1,77 @@
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="OHS.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script>
+  </head>
+  
+  <body>
+    <div class="first-container">
+      <div class="nav-container">
+        <div class="nav-row">
+            <div class="nav-logo">
+              <a href="#">
+                OHS.
+              </a>
+            </div>
+            <div class="nav-controls">
+                <a href="#">HOME</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">ABOUT US</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container" style="background-color: black;">
+      <div class="row">
+        <h1 >
+          KOSOMAK IN STYLE
+        </h1>
+        <p>
+          lama bt2ool kos omak e7na han sa3dak ezay t2olha ba mazag wa rawa2an.
+        </p>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <h1>
+          EL SHAWAZ
+        </h1>
+        <p>
+          3adad el SHAWAZ fe masr by zeed rapidly fe the past couple of years, up to 80%. menhom el by read el 
+          article ibn el metnaka dah.... e7na b2a bn burn as many of them as we can ba kodorat el black magic bta3et 
+          the devil mn far3 egypt msh masr.
+        </p>
+      </div>
+    </div>
+    
+    <div class="container" style="background-color: black;">
+      <div class="row">
+        <h1>
+          EL LESBIEN
+        </h1>
+        <p>
+          dah kewayes dah msh we7ash el mohem msh Zan.
+        </p>
+      </div>
+    </div>
+  </body>
+  
+<script type="text/javascript">
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var height = $(".first-container").height();
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop >= height - 40) {
+      $(".nav-container").addClass("solid-nav");
+    } else {
+      $(".nav-container").removeClass("solid-nav");
+    }
+  });
+});
+
+
+  </script>

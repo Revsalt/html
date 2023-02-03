@@ -1,0 +1,129 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(20, 20, 20);  
+    overflow-x: hidden;  
+    overflow-y: hidden;
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+ }
+
+header {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+body {
+    width: auto;
+    height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+  }
+
+.banner {
+    width: auto;
+    height: 320px;
+    background: url("1500x500.jpg");
+    opacity: 0;
+    transform: translate(500px, 0%);
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+span {
+    margin: 0 10px;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .banner {
+    transition: opacity 1.5s ease, transform 1s ease;
+  }
+}
+
+.banner-transition {
+    opacity: 1;
+    transform: translate(0px, 0%);
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: #fffcfc00;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: right;
+    border: none;
+    outline: none;
+    font-size: large;
+    cursor: pointer;
+    padding: 20px 20px;
+    transition: 0.3s;
+    color: rgb(129, 129, 129);
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    color: rgb(68, 68, 68);
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  .parallax {
+    /* The image used */
+    background-image: url("wallpaper.jpeg");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax1 {
+    /* The image used */
+    background-image: url("market.png");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
