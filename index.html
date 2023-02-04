@@ -13,21 +13,32 @@
       <div class="nav-container">
         <div class="nav-row">
             <div class="nav-logo">
-              <a href="#">
+              <a href="#" class="mobile-hide">
                 OHS.
               </a>
             </div>
-            <div class="nav-controls">
+            <div class="dropdown" >
+
+              <button onclick="myFunction()" class="dropbtn">OHS.</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+              </div>
+
+            </div>            
+            <div class="nav-controls mobile-hide">
                 <a href="#">HOME</a>
                 <a href="#">CONTACT US</a>
                 <a href="#">ABOUT US</a>
             </div>
+
         </div>
       </div>
     </div>
     
-    <div class="container" style="background-color: black;" data-inviewport="scale-in">
-      <div class="row" >
+    <div class="container" style="background-color: black;">
+      <div class="row" data-inviewport="scale-in">
         <h1>
           KOSOMAK IN STYLE
         </h1>
@@ -62,7 +73,7 @@
     </div>
 
     <div class="container"">
-      <div class="row" data-inviewport="scale-in">
+      <div class="row" data-inviewport="fade-rotate">
         <h1>
           EL PANSEXUAL
         </h1>
@@ -79,8 +90,8 @@
           <input type="text" name="mail"><br>
           Comment:<br>
           <input type="text" name="comment" size="50"><br><br>
-          <input type="submit" value="Send">
-          <input type="reset" value="Reset">
+          <input type="submit" value="Send" class="button" style="background-color: #4CAF50;">
+          <input type="reset" value="Reset" class="button" style="background-color: #df3535;">
           </form>
 
       </div>
@@ -121,3 +132,25 @@ ELs_inViewport.forEach(EL => {
 });
 
 </script>
+
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
